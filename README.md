@@ -1,8 +1,8 @@
-# Touchpad Toggle Tool for Asus Zenbook Duo on Ubuntu
+# Touchpad Toggle Tool for Asus Zenbook Duo
 
 ## Description
 
-Since the Asus Zenbook Duo doesn't have a dedicated button to quickly turn the touchpad on or off, this tool for Linux is here to help you toggle it easily.  
+Since the Asus Zenbook Duo doesn't have a dedicated button to quickly turn the touchpad on or off, this tool for (Ubuntu) Linux is here to help you toggle it easily.  
   
 It's been tested on the `Asus Zenbook Duo 2025 (UX8406CA)` on `Ubuntu 25.04`.
 
