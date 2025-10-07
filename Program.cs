@@ -1,16 +1,13 @@
-﻿using System.ComponentModel;
-using System.Diagnostics;
-using System.Linq.Expressions;
-
+﻿
 if (TryGetTouchpadDeviceId(out var deviceId) && 
     TryGetDeviceState(deviceId, out var enabled) && 
     TrySetDeviceState(deviceId, !enabled))
 {
-    Console.WriteLine($"The touch pad state has been toggled to: {(!enabled ? "enabled" : "disabled")}");
+    WriteLine($"The touch pad state has been toggled to: {(!enabled ? "enabled" : "disabled")}");
 }
 else
 {
-    Console.Error.WriteLine("Failed to toggle the device");
+    Error.WriteLine("Failed to toggle the device");
 }
 
 static string CreateProcessAndReadOutput(string filename, string arguments)
@@ -62,7 +59,7 @@ static bool TryGetTouchpadDeviceId(out int id)
     }
     catch (Exception ex)
     {
-        Console.WriteLine(ex.Message);
+        WriteLine(ex.Message);
         id = -1;
         return false;
     }
@@ -102,7 +99,7 @@ static bool TryGetDeviceState(int deviceId, out bool enabled)
     }
     catch (Exception ex)
     {
-        Console.Error.Write(ex.Message);
+        Error.Write(ex.Message);
         enabled = false;
         return false;
     }
@@ -117,7 +114,7 @@ static bool TrySetDeviceState(int deviceId, bool enabled)
         {
             if (newState == enabled)
             {
-                Console.WriteLine($"The touchpad has been turned {(enabled ? "on" : "off")}");
+                WriteLine($"The touchpad has been turned {(enabled ? "on" : "off")}");
                 return true;
             }
             else
@@ -132,7 +129,7 @@ static bool TrySetDeviceState(int deviceId, bool enabled)
     }
     catch (Exception ex)
     {
-        Console.Error.WriteLine(ex.Message);
+        Error.WriteLine(ex.Message);
         return false;
     }
 }
