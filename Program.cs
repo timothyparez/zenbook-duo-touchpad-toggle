@@ -2,24 +2,11 @@
 using System.Diagnostics;
 using System.Linq.Expressions;
 
-
-if (TryGetTouchpadDeviceId(out var deviceId))
+if (TryGetTouchpadDeviceId(out var deviceId) && 
+    TryGetDeviceState(deviceId, out var enabled) && 
+    TrySetDeviceState(deviceId, !enabled))
 {
-    if (TryGetDeviceState(deviceId, out var enabled))
-    {
-        if (TrySetDeviceState(deviceId, !enabled))
-        {
-            Console.WriteLine($"The touch pad state has been toggled to: {(!enabled ? "enabled" : "disabled")}");
-        }
-        else
-        {
-            Console.Error.WriteLine("Failed to set the touchpad state");
-        }
-    }
-    else
-    {
-        Console.Error.WriteLine("Failed to set the get the touchpad state");
-    }
+    Console.WriteLine($"The touch pad state has been toggled to: {(!enabled ? "enabled" : "disabled")}");
 }
 else
 {
