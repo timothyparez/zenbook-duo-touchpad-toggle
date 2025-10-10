@@ -7,7 +7,7 @@
     <PublishSingleFile>true</PublishSingleFile>
     <PublishAot>true</PublishAot>
     <SelfContained>true</SelfContained>
-    <RootNamespace>zenbook_duo_touchpad_toggle</RootNamespace>
+    <RootNamespace>ZenbookDuoTouchPadToggle</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
