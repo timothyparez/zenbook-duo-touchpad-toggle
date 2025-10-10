@@ -8,7 +8,8 @@ It's been tested on the `Asus Zenbook Duo 2025 (UX8406CA)` on `Ubuntu 25.04`.
 
 ## Important
 
-Currently this only works on Xorg, there is no Wayland support yet
+  - If you are on Xorg you can simply run `./zenbook-duo-touchpad-toggle` and it will use `xinput`  
+  - If you are on Wayland and using gnome you should run `./zenbook-duo-touchpad-toggle --method gnome` instead. (Can also be used on Xorg)  
 
 ## Installation
 
@@ -23,4 +24,4 @@ Currently this only works on Xorg, there is no Wayland support yet
 
 If you want to compile the tool yourself,   
 make sure you have .NET9 (or later) installed  
-and run `dotnet build -c Release` in the project directory.
+and run `dotnet publish` in the project directory.
