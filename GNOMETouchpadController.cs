@@ -1,3 +1,6 @@
+namespace ZenbookDuoTouchPadToggle;
+
+[CommandLineMethodValue("gnome")]
 public class GNOMETouchpadController : ITouchpadController
 {
     private static string GNOME_GSETTINGS = "gsettings";

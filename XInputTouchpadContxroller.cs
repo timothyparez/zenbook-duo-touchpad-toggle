@@ -1,3 +1,6 @@
+namespace ZenbookDuoTouchPadToggle;
+
+[CommandLineMethodValue("xinput")]
 public class XInputTouchpadContxroller : ITouchpadController
 {
     public bool TryToggleTouchpadState()

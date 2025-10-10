@@ -15,10 +15,17 @@
   <ItemGroup>
     <Using Include="System" />
     <Using Include="System.Collections.Generic" />
-    <Using Include="System.Linq"/>
+    <Using Include="System.Linq" />
     <Using Include="System.Text.RegularExpressions" />
-    <Using Include="System.Diagnostics"/>
+    <Using Include="System.Diagnostics" />
+    <Using Include="System.CommandLine"/>
+    <Using Include="System.Reflection"/>
+    <Using Include="ZenbookDuoTouchPadToggle"/>
     <Using Include="System.Console" Static="true" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.CommandLine" Version="2.0.0-rc.1.25451.107" />
   </ItemGroup>
 
 </Project>

@@ -1,3 +1,4 @@
+namespace ZenbookDuoTouchPadToggle;
 public static class ProcessHelper
 {
     public static string CreateProcessAndReadOutput(string filename, string arguments)
